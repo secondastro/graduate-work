@@ -32,7 +32,7 @@ public class AdsController {
     }
 
     /**
-     * Добавления обьявления
+     * Добавление обьявления
      */
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<AdsDTO> addAd(
@@ -44,7 +44,7 @@ public class AdsController {
     }
 
     /**
-     * Получения комментария
+     * Получение комментария
      */
     @GetMapping("/{id}/comments")
     public ResponseEntity<ResponseWrapperComment> getComments(
@@ -54,7 +54,7 @@ public class AdsController {
     }
 
     /**
-     * Добавления комментария
+     * Добавление комментария
      */
     @PostMapping("/{id}/comments")
     public ResponseEntity<CommentDTO> addComment(
@@ -64,7 +64,7 @@ public class AdsController {
         return ResponseEntity.ok(commentService.addComment(id, commentDTO));
     }
     /**
-     * Получения обьявления
+     * Получение обьявления
      */
     @GetMapping("{id}")
     public ResponseEntity<FullAds> getAds(
@@ -75,7 +75,7 @@ public class AdsController {
     }
 
     /**
-     * Удаления обьявления
+     * Удаление обьявления
      */
     @DeleteMapping("{id}")
     public ResponseEntity<Void> removeAd(
@@ -86,7 +86,7 @@ public class AdsController {
     }
 
     /**
-     * Обновления обьявления
+     * Обновление обьявления
      */
     @PostMapping("{id}")
     public ResponseEntity<AdsDTO> updateAds(
@@ -121,7 +121,7 @@ public class AdsController {
     }
 
     /**
-     * Получения обьявлений авторизованного пользователя
+     * Получение обьявлений авторизованного пользователя
      */
     @GetMapping("/me")
     public ResponseEntity<?> getAdsMe()  {
